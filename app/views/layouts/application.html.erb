@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shost</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Shost</a>
+    <ul class="nav">
+      <li><a href="/notes">Notes</a></li>
+      <li><a href="/events">Events</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+<%= yield %>
+</div>
+
+</body>
+</html>
