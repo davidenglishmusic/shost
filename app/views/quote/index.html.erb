@@ -1,9 +1,9 @@
-<h1>Listing notes</h1>
+<h1>Listing quotes</h1>
 
 <table class="table">
   <thead>
     <tr>
-      <th>Note</th>
+      <th>Quote</th>
       <th>Pages</th>
       <th>Source</th>
       <th>Author</th>
@@ -20,7 +20,7 @@
         <td><%= note.source %></td>
         <td><%= note.author %></td>
         <td><%= note.url %></td>
-        <td><%= note.date %></td>
+        <td><%= note.date.to_s.gsub('-01-01', '') %></td>
       </tr>
     <% end %>
   </tbody>
