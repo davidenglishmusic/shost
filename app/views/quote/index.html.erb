@@ -1,0 +1,29 @@
+<h1>Listing notes</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Note</th>
+      <th>Pages</th>
+      <th>Source</th>
+      <th>Author</th>
+      <th>Url</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notes.each do |note| %>
+      <tr>
+        <td><%= note.note %></td>
+        <td><%= note.pages %></td>
+        <td><%= note.source %></td>
+        <td><%= note.author %></td>
+        <td><%= note.url %></td>
+        <td><%= note.date %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  #http_basic_authenticate_with name: "david", password: "shost531"
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
