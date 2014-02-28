@@ -1,0 +1,61 @@
+<%= form_for(@piece) do |f| %>
+  <% if @piece.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@piece.errors.count, "error") %> prohibited this piece from being saved:</h2>
+
+      <ul>
+      <% @piece.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :composer %><br>
+    <%= f.text_field :composer %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date, :start_year => 1900, :end_year => 1975 %>
+  </div>
+  <div class="field">
+    <%= f.label :opus %><br>
+    <%= f.text_field :opus %>
+  </div>
+  <div class="field">
+    <%= f.label :pages %><br>
+    <%= f.text_field :pages %>
+  </div>
+  <div class="field">
+    <%= f.label :positionInCycle %><br>
+    <%= f.text_field :positionInCycle %>
+  </div>
+  <div class="field">
+    <%= f.label :imageURLs %><br>
+    <%= f.text_area :imageURLs %>
+  </div>
+  <div class="field">
+    <%= f.label :originalText %><br>
+    <%= f.text_area :originalText %>
+  </div>
+  <div class="field">
+    <%= f.label :transliterationText %><br>
+    <%= f.text_area :transliterationText %>
+  </div>
+  <div class="field">
+    <%= f.label :translationText %><br>
+    <%= f.text_area :translationText %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update piece", class: "btn btn-primary" %>
+  </div>
+<% end %>

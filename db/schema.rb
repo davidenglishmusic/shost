@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140219185503) do
+ActiveRecord::Schema.define(version: 20140228031529) do
 
   create_table "events", force: true do |t|
     t.text     "event"
@@ -27,6 +27,22 @@ ActiveRecord::Schema.define(version: 20140219185503) do
     t.string   "author"
     t.string   "url"
     t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pieces", force: true do |t|
+    t.string   "title"
+    t.string   "composer"
+    t.string   "author"
+    t.date     "date"
+    t.string   "opus"
+    t.string   "pages"
+    t.string   "positionInCycle"
+    t.text     "imageURLs"
+    t.text     "originalText"
+    t.text     "transliterationText"
+    t.text     "translationText"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

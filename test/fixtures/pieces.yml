@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  composer: MyString
+  author: MyString
+  date: 2014-02-27
+  opus: MyString
+  pages: MyString
+  positionInCycle: MyString
+  imageURLs: MyText
+  originalText: MyText
+  transliterationText: MyText
+  translationText: MyText
+
+two:
+  title: MyString
+  composer: MyString
+  author: MyString
+  date: 2014-02-27
+  opus: MyString
+  pages: MyString
+  positionInCycle: MyString
+  imageURLs: MyText
+  originalText: MyText
+  transliterationText: MyText
+  translationText: MyText

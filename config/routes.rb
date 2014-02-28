@@ -1,4 +1,6 @@
 Shost::Application.routes.draw do
+  resources :pieces
+
   resources :events
 
   resources :notes
@@ -8,6 +10,8 @@ Shost::Application.routes.draw do
   get '/timeline/', to: 'timeline#index'
 
   get '/quotes/', to: 'quote#index'
+
+  get '/songs/', to: 'songs#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

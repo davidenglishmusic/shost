@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @piece.title %>
+</p>
+
+<p>
+  <strong>Composer:</strong>
+  <%= @piece.composer %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @piece.author %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @piece.date %>
+</p>
+
+<p>
+  <strong>Opus:</strong>
+  <%= @piece.opus %>
+</p>
+
+<p>
+  <strong>Pages:</strong>
+  <%= @piece.pages %>
+</p>
+
+<p>
+  <strong>Positionincycle:</strong>
+  <%= @piece.positionInCycle %>
+</p>
+
+<p>
+  <strong>Imageurls:</strong>
+  <%= @piece.imageURLs %>
+</p>
+
+<p>
+  <strong>Originaltext:</strong>
+  <%= @piece.originalText %>
+</p>
+
+<p>
+  <strong>Transliterationtext:</strong>
+  <%= @piece.transliterationText %>
+</p>
+
+<p>
+  <strong>Translationtext:</strong>
+  <%= @piece.translationText %>
+</p>
+
+<%= link_to 'Edit', edit_piece_path(@piece), class: "btn btn-default", role: "button" %> |
+<%= link_to 'Back', pieces_path, class: "btn btn-default", role: "button" %>
