@@ -8,13 +8,10 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Composer</th>
       <th>Author</th>
       <th>Date</th>
       <th>Opus</th>
-      <th>Pages</th>
       <th>Position in cycle</th>
-      <th>Image URLs</th>
       <th>Original Text</th>
       <th>Transliteration Text</th>
       <th>Translation Text</th>
@@ -28,13 +25,10 @@
     <% @pieces.each do |piece| %>
       <tr>
         <td><%= piece.title %></td>
-        <td><%= piece.composer %></td>
         <td><%= piece.author %></td>
-        <td><%= piece.date %></td>
+        <td><%= piece.date.to_s.gsub('-01-01', '') %></td>
         <td><%= piece.opus %></td>
-        <td><%= piece.pages %></td>
         <td><%= piece.positionInCycle %></td>
-        <td><%= piece.imageURLs %></td>
         <td><%= piece.originalText %></td>
         <td><%= piece.transliterationText %></td>
         <td><%= piece.translationText %></td>
