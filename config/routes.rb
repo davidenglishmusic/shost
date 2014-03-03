@@ -13,6 +13,8 @@ Shost::Application.routes.draw do
 
   get '/songs/', to: 'songs#index'
 
+  get '/songs/:id/:pages', to: 'scoreview#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -15,6 +15,7 @@
       <th>Original Text</th>
       <th>Transliteration Text</th>
       <th>Translation Text</th>
+      <th>Score Link</th>
       <th></th>
       <th></th>
       <th></th>
@@ -32,7 +33,7 @@
         <td><%= piece.originalText %></td>
         <td><%= piece.transliterationText %></td>
         <td><%= piece.translationText %></td>
-        
+	<td><%=link_to "View score", "#{piece.id}/0", class: "btn btn-default", role: "button" %></td>
       </tr>
     <% end %>
   </tbody>
