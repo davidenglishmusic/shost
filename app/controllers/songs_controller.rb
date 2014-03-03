@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
 
   def index
-    @pieces = Piece.all(:order => 'date, positionInCycle')
+    @pieces = Piece.all(:order => 'date, positionincycle')
   end
 
 
