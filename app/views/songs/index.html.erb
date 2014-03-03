@@ -33,7 +33,7 @@
         <td><%= piece.originalText %></td>
         <td><%= piece.transliterationText %></td>
         <td><%= piece.translationText %></td>
-	<td><%=link_to "View score", "#{piece.id}/0", class: "btn btn-default", role: "button" %></td>
+	<td><%=link_to "View score", "/songs/#{piece.id}/0", class: "btn btn-default", role: "button" %></td>
       </tr>
     <% end %>
   </tbody>
