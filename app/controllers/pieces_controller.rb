@@ -69,6 +69,6 @@ class PiecesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def piece_params
-      params.require(:piece).permit(:title, :composer, :author, :date, :opus, :pages, :positionInCycle, :imageURLs, :originalText, :transliterationText, :translationText)
+      params.require(:piece).permit(:title, :composer, :author, :date, :opus, :pages, :positionincycle, :imageURLs, :originalText, :transliterationText, :translationText)
     end
 end
