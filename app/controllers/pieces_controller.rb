@@ -4,7 +4,7 @@ class PiecesController < ApplicationController
   # GET /pieces
   # GET /pieces.json
   def index
-    @pieces = Piece.order(:date, :positionInCycle)
+    @pieces = Piece.order(:date, :positionincycle)
   end
 
   # GET /pieces/1
