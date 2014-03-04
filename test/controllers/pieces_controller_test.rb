@@ -18,7 +18,7 @@ class PiecesControllerTest < ActionController::TestCase
 
   test "should create piece" do
     assert_difference('Piece.count') do
-      post :create, piece: { author: @piece.author, composer: @piece.composer, date: @piece.date, imageURLs: @piece.imageURLs, opus: @piece.opus, originalText: @piece.originalText, pages: @piece.pages, positionInCycle: @piece.positionInCycle, title: @piece.title, translationText: @piece.translationText, transliterationText: @piece.transliterationText }
+      post :create, piece: { author: @piece.author, composer: @piece.composer, date: @piece.date, imageURLs: @piece.imageURLs, opus: @piece.opus, originalText: @piece.originalText, pages: @piece.pages, positionincycle: @piece.positionincycle, title: @piece.title, translationText: @piece.translationText, transliterationText: @piece.transliterationText }
     end
 
     assert_redirected_to piece_path(assigns(:piece))
@@ -35,7 +35,7 @@ class PiecesControllerTest < ActionController::TestCase
   end
 
   test "should update piece" do
-    patch :update, id: @piece, piece: { author: @piece.author, composer: @piece.composer, date: @piece.date, imageURLs: @piece.imageURLs, opus: @piece.opus, originalText: @piece.originalText, pages: @piece.pages, positionInCycle: @piece.positionInCycle, title: @piece.title, translationText: @piece.translationText, transliterationText: @piece.transliterationText }
+    patch :update, id: @piece, piece: { author: @piece.author, composer: @piece.composer, date: @piece.date, imageURLs: @piece.imageURLs, opus: @piece.opus, originalText: @piece.originalText, pages: @piece.pages, positionincycle: @piece.positionincycle, title: @piece.title, translationText: @piece.translationText, transliterationText: @piece.transliterationText }
     assert_redirected_to piece_path(assigns(:piece))
   end
 
