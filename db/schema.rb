@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228031529) do
+ActiveRecord::Schema.define(version: 20140303235701) do
 
   create_table "events", force: true do |t|
     t.text     "event"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20140228031529) do
     t.date     "date"
     t.string   "opus"
     t.string   "pages"
-    t.string   "positionInCycle"
+    t.string   "positionincycle"
     t.text     "imageURLs"
     t.text     "originalText"
     t.text     "transliterationText"
