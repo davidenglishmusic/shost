@@ -8,11 +8,9 @@ class ScoreeditController < ApplicationController
 
 	if ( (params[:pages].to_i) >= (urlArray.length - 1) )
 		@forwardPageURL = "/pieces/#{songComponent}/#{songPageComponent}"
-	
 	else
 		nextPageNumber = songPageComponent + 1
 		@forwardPageURL = "/pieces/#{songComponent}/#{nextPageNumber}"
-
 	end
 
 	if ( (params[:pages].to_i) <= 0 )
