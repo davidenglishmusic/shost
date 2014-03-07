@@ -23,7 +23,7 @@ class ScoreeditController < ApplicationController
 	@songTitle = Piece.find(params[:id]).title
 	@pageNumber = (params[:pages]).to_i
 	@songnote = Songnote.new
-	@previousNotes = Songnote.where(songtitle: @songTitle, page: @pageNumber.to_i)
+	@previousNotes = Songnote.where(songtitle: @songTitle, page: (@pageNumber.to_i))
 
   end
 end
