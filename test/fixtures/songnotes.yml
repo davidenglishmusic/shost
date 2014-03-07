@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  songtitle: MyString
+  page: MyString
+  xcoordinate: MyString
+  ycoordinate: MyString
+  measure: MyString
+  note: MyText
+
+two:
+  songtitle: MyString
+  page: MyString
+  xcoordinate: MyString
+  ycoordinate: MyString
+  measure: MyString
+  note: MyText

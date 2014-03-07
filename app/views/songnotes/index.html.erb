@@ -1,0 +1,41 @@
+<h1>Listing songnotes</h1>
+
+<br>
+<input type="text" name="searchField" placeholder="Search...">
+<br>
+
+<table class="table" id="infoTable">
+  <thead>
+    <tr>
+      <th>Songtitle</th>
+      <th>Page</th>
+      <th>Xcoordinate</th>
+      <th>Ycoordinate</th>
+      <th>Measure</th>
+      <th>Note</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @songnotes.each do |songnote| %>
+      <tr>
+        <td><%= songnote.songtitle %></td>
+        <td><%= songnote.page %></td>
+        <td><%= songnote.xcoordinate %></td>
+        <td><%= songnote.ycoordinate %></td>
+        <td><%= songnote.measure %></td>
+        <td><%= songnote.note %></td>
+        <td><%= link_to 'Show', songnote, class: "btn btn-default", role: "button" %></td>
+        <td><%= link_to 'Edit', edit_songnote_path(songnote), class: "btn btn-default", role: "button" %></td>
+        <td><%= link_to 'Destroy', songnote, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", role: "button" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Songnote', new_songnote_path, class: "btn btn-default", role: "button" %>

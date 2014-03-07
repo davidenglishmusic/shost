@@ -1,0 +1,41 @@
+<%= form_for(@songnote) do |f| %>
+  <% if @songnote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@songnote.errors.count, "error") %> prohibited this songnote from being saved:</h2>
+
+      <ul>
+      <% @songnote.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :songtitle %><br>
+    <%= f.text_field :songtitle %>
+  </div>
+  <div class="field">
+    <%= f.label :page %><br>
+    <%= f.text_field :page %>
+  </div>
+  <div class="field">
+    <%= f.label :xcoordinate %><br>
+    <%= f.text_field :xcoordinate %>
+  </div>
+  <div class="field">
+    <%= f.label :ycoordinate %><br>
+    <%= f.text_field :ycoordinate %>
+  </div>
+  <div class="field">
+    <%= f.label :measure %><br>
+    <%= f.text_field :measure %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br>
+    <%= f.text_area :note %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update note", class: "btn btn-primary" %>
+  </div>
+<% end %>

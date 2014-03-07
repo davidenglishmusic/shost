@@ -1,0 +1,74 @@
+<div id="scoreviewNav" style="position:fixed;right:5px;top:50px;font-size:2em;">
+<a class="btn btn-default"  href="<%= @previousPageURL %>"><</a>
+<a class="btn btn-default" href="<%= @forwardPageURL %>">></a>
+</div>
+
+<div id="scoreEditCurrentPageInformation">
+<div id="notesDefaultSongTitle">
+<%= @songTitle %>
+</div>
+<div id="notesDefaultSongPage">
+<%= @pageNumber %>
+</div>
+
+</div>
+
+
+<div id="previousNotes">
+<% @previousNotes.each do |individualNote| %>
+
+<div id="popNote<%= individualNote.xcoordinate %>-<%= individualNote.ycoordinate =%>" class="previousPopNote">
+<div class="previousPopNoteInfo">
+<h4>Measure(s)</h4>
+<h5><%= individualNote.measure %></h5>
+<h4>Note</h4>
+<h5><%= individualNote.note %></h5>
+</div>
+</div>
+<% end %>
+</div>
+
+
+<div id="imageContainer" style="position:relative;">
+
+<img id="centralImage" src="<%= @URL %>" alt="Score Page">
+
+<div id="gridContainer" style="position:absolute;width:100%;height:100%;top:0px;left:0px;z-index:1;">
+</div>
+
+</div>
+
+<div id="formTemplate">
+
+<%= render 'form' %>
+
+</div>
+
+
+<!-- Controller specific patch -->
+
+<script>(function() {
+
+  jQuery(function($) {
+    return $(".gridPoint").click(function() {
+      var formContents, l, newFormSongPageID, newFormSongTitleID, newFormSongXCoorID, newFormSongYCoorID, newFormXCoor, newFormYCoor;
+      if (!$(this).find('.pop').length) {
+        l = $(this).attr('id');
+        formContents = $('#formTemplate').html();
+        $(this).append('<div class="pop" id="popForm' + l + '">' + formContents + '</div>');
+        newFormSongTitleID = '#popForm' + l + ' #songnote_songtitle';
+        $(newFormSongTitleID).val($('#notesDefaultSongTitle').html());
+        newFormSongPageID = '#popForm' + l + ' #songnote_page';
+        $(newFormSongPageID).val($('#notesDefaultSongPage').html());
+        newFormXCoor = l.match(/^[0-9]*/);
+        newFormSongXCoorID = '#popForm' + l + ' #songnote_xcoordinate';
+        $(newFormSongXCoorID).val(newFormXCoor);
+        newFormYCoor = l.match(/[^-]+$/);
+        newFormSongYCoorID = '#popForm' + l + ' #songnote_ycoordinate';
+        return $(newFormSongYCoorID).val(newFormYCoor);
+      }
+    });
+  });
+
+}).call(this);</script>
+

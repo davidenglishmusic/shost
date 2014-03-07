@@ -2,6 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+###
 gridWidth = 100
 gridHeight = 100
 xcoor = 0
@@ -24,21 +25,11 @@ jQuery ($) ->
 			if xcoor > gridWidth
 				xcoor = 0
 		ycoor++
-	#Then append old notes
-	$( '.previousPopNote').each ->
-		noteXCoor = $(this).attr('id').match(/\d+/)
-		console.log this
-		console.log noteXCoor
-		noteYCoor = $(this).attr('id').match(/[^-]+$/)
-		console.log noteYCoor
-		destination = "#" + noteXCoor + "-" + noteYCoor
-		console.log destination
-		$(destination).append(this)
 
-###
 jQuery ($) ->
 	$( ".gridPoint" ).hover ->
 		k = $(this).attr('id')
 		#$( "#coordinateDisplay" ).val(k)
 		console.log k
+
 ###

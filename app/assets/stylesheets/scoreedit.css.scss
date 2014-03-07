@@ -1,20 +1,21 @@
-// Place all the styles related to the scoreview controller here.
+// Place all the styles related to the scoreedit controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.pop, .previousPopNote {
+
+.pop {
 	height: 37px;
 	width: 30px;
 	margin-top: 0px;
 	top: -50px;
 	left: -12px;
 	position: relative;
-	background-color: #C0E445;
+	background-color: #C95762;
 	border: 0px solid;
 	border-radius: 45px;
 }
 
-.pop:after, .previousPopNote:after {
+.pop:after {
 	content: "";
 	position: absolute;
 	right: 2px;
@@ -22,18 +23,18 @@
 	width: 0px;
 	height: 0px;
 	border-width: 26px 13px 0px;
-	border-color: #C0E445 transparent;
+	border-color: #C95762 transparent;
 	border-style: solid;
 }
 
-.pop:hover, .previousPopNote:hover {
+.pop:hover {
 	width:300px;
 	height:300px; /*230*/
 	left:-150px;
 	top:-319px; /*249*/
 }
 
-.pop:hover:after, .previousPopNote:hover:after {
+.pop:hover:after {
 	content: "";
 	position: absolute;
 	right: 134px;
@@ -41,7 +42,7 @@
 	width: 0px;
 	height: 0px;
 	border-width: 26px 13px 0px;
-	border-color: #C0E445 transparent;
+	border-color: #C95762 transparent;
 	border-style: solid;
 }
 
@@ -54,20 +55,24 @@
 	z-index:10;
 }
 
-.previousPopNoteInfo {
-	padding:20px;
-	text-align:center;
+.pop:hover .popInfo, .pop:hover form {
+	display:block;
 }
 
-.previousPopNoteInfo {
+.songNoteHide {
 	display:none;
 }
 
-#previousNotesLoadingZone {
-	display:block;
+.pop form {
+	padding:20px;
+	text-align:center;
+	display:none;
 }
 
-.pop:hover .popInfo, .pop:hover #new_songnote.new_songnote, .previousPopNote:hover .previousPopNoteInfo {
-	display:block;
+.pop form #songnote_note {
+	height:60px;
 }
 
+#formTemplate, #scoreEditCurrentPageInformation {
+	display:none;
+}

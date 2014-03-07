@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140303235701) do
+ActiveRecord::Schema.define(version: 20140304235418) do
 
   create_table "events", force: true do |t|
     t.text     "event"
@@ -43,6 +43,17 @@ ActiveRecord::Schema.define(version: 20140303235701) do
     t.text     "originalText"
     t.text     "transliterationText"
     t.text     "translationText"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "songnotes", force: true do |t|
+    t.string   "songtitle"
+    t.string   "page"
+    t.string   "xcoordinate"
+    t.string   "ycoordinate"
+    t.string   "measure"
+    t.text     "note"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

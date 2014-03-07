@@ -1,0 +1,1 @@
+json.extract! @songnote, :id, :songtitle, :page, :xcoordinate, :ycoordinate, :measure, :note, :created_at, :updated_at

@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Songtitle:</strong>
+  <%= @songnote.songtitle %>
+</p>
+
+<p>
+  <strong>Page:</strong>
+  <%= @songnote.page %>
+</p>
+
+<p>
+  <strong>Xcoordinate:</strong>
+  <%= @songnote.xcoordinate %>
+</p>
+
+<p>
+  <strong>Ycoordinate:</strong>
+  <%= @songnote.ycoordinate %>
+</p>
+
+<p>
+  <strong>Measure:</strong>
+  <%= @songnote.measure %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @songnote.note %>
+</p>
+
+<%= link_to 'Edit', edit_songnote_path(@songnote), class: "btn btn-default", role: "button" %> |
+<%= link_to 'Back to the Index', songnotes_path, class: "btn btn-default", role: "button" %> |
+<%= link_to 'Back to the score', "/pieces/#{Piece.find_by_title(@songnote.songtitle).id}/#{@songnote.page}", class: "btn btn-default", role: "button" %>
+

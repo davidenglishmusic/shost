@@ -14,6 +14,7 @@
       <th>Original Text</th>
       <th>Transliteration Text</th>
       <th>Translation Text</th>
+      <th>Score Link</th>
       <th></th>
       <th></th>
       <th></th>
@@ -34,6 +35,7 @@
         <td><%= piece.originalText %></td>
         <td><%= piece.transliterationText %></td>
         <td><%= piece.translationText %></td>
+	<td><%=link_to "Edit score", "/pieces/#{piece.id}/0", class: "btn btn-default", role: "button" %></td>
         <td><%= link_to 'Show', piece, class: "btn btn-default", role: "button" %></td>
         <td><%= link_to 'Edit', edit_piece_path(piece), class: "btn btn-default", role: "button" %></td>
         <td><%= link_to 'Destroy', piece, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", role: "button" %></td>
