@@ -26,9 +26,6 @@ class ScoreviewController < ApplicationController
 	@songTitle = Piece.find(params[:id]).title
 	@pageNumber = (params[:pages]).to_i
 	
-	@songnote = Songnote.new
-
-	
 	@previousNotes = Songnote.where(:songtitle => @songTitle, :page => @pageNumber)
   end
 
