@@ -25,6 +25,12 @@ jQuery ($) ->
 				xcoor = 0
 		ycoor++
 	#Then append old notes
+	setTimeout(appendPreviousNotes, 1000)
+	
+	
+#Append Previous Notes function
+
+appendPreviousNotes = () ->
 	$( '.previousPopNote').each ->
 		noteXCoor = $(this).attr('id').match(/\d+/)
 		console.log this
@@ -34,6 +40,7 @@ jQuery ($) ->
 		destination = "#" + noteXCoor + "-" + noteYCoor
 		console.log destination
 		$(destination).append(this)
+
 
 ###
 jQuery ($) ->
