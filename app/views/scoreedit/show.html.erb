@@ -45,28 +45,28 @@
 
 <!-- Controller specific patch -->
 
-<script>(function() {
+<script>
 
-  jQuery(function($) {
+(function() {
+
+  $(window).load(function() {
     return $(".gridPoint").click(function() {
-      var formContents, l, newFormSongPageID, newFormSongTitleID, newFormSongXCoorID, newFormSongYCoorID, newFormXCoor, newFormYCoor;
+      var l;
       if (!$(this).find('.pop').length) {
         l = $(this).attr('id');
-        formContents = $('#formTemplate').html();
-        $(this).append('<div class="pop" id="popForm' + l + '">' + formContents + '</div>');
-        newFormSongTitleID = '#popForm' + l + ' #songnote_songtitle';
-        $(newFormSongTitleID).val($('#notesDefaultSongTitle').html());
-        newFormSongPageID = '#popForm' + l + ' #songnote_page';
-        $(newFormSongPageID).val($('#notesDefaultSongPage').html());
-        newFormXCoor = l.match(/^[0-9]*/);
-        newFormSongXCoorID = '#popForm' + l + ' #songnote_xcoordinate';
-        $(newFormSongXCoorID).val(newFormXCoor);
-        newFormYCoor = l.match(/[^-]+$/);
-        newFormSongYCoorID = '#popForm' + l + ' #songnote_ycoordinate';
-        return $(newFormSongYCoorID).val(newFormYCoor);
+        return $(this).append('<div class="pop" id="pop' + l + '"><div class="popInfo"><form id="popform' + l + '"><input type="text" name="popInfoMeasures" placeholder="Measure(s)"><textarea rows="7" cols="30" name="popInfoNotes" placeholder="Notes..."></textarea><div class="actions">\
+	    <input class="btn btn-primary" name="commit" type="submit" value="Update Note">\
+	  </div></form></div></div>');
       }
     });
   });
+
+  /*
+  	$( ".gridPoint" ).hover ->
+  		m = $(this).attr('id')
+  		console.log "This is the info for pop " + m
+  */
+
 
 }).call(this);</script>
 

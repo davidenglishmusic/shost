@@ -33,6 +33,7 @@
 	background-color: #C0E445;
 	border: 0px solid;
 	border-radius: 45px;
+	opacity:0.95;
 }
 
 .pop:after, .previousPopNote:after {
@@ -73,6 +74,12 @@
 	text-align:center;
 	box-sizing: border-box;
 	z-index:10;
+}
+
+@-moz-document url-prefix() {
+    .popInfo {
+        width: 280px;
+    }
 }
 
 .previousPopNoteInfo {
