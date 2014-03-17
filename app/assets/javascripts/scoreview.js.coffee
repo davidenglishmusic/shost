@@ -2,12 +2,11 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-gridWidth = 100
-gridHeight = 100
-xcoor = 0
-ycoor = 0
-
-jQuery ($) ->
+setUpGrid = () ->
+	gridWidth = 100
+	gridHeight = 100
+	xcoor = 0
+	ycoor = 0
 	pointWidth = $( "#centralImage" ).width() / gridWidth * 0.98
 	#pointWidth = 19
 	#console.log $( "#centralImage" ).height()
@@ -24,9 +23,7 @@ jQuery ($) ->
 			if xcoor > gridWidth
 				xcoor = 0
 		ycoor++
-	#Then append old notes
-	setTimeout(appendPreviousNotes, 1000)
-	
+		console.log "Finished Creating Grid"
 	
 #Append Previous Notes function
 
@@ -40,7 +37,12 @@ appendPreviousNotes = () ->
 		destination = "#" + noteXCoor + "-" + noteYCoor
 		console.log destination
 		$(destination).append(this)
+	console.log "Added points"
 
+
+$(document).ready ->
+	setUpGrid()
+	appendPreviousNotes()
 
 ###
 jQuery ($) ->
