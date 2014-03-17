@@ -14,21 +14,6 @@
 </div>
 
 
-<div id="previousNotes">
-<% @previousNotes.each do |individualNote| %>
-
-<div id="popNote<%= individualNote.xcoordinate %>-<%= individualNote.ycoordinate =%>" class="previousPopNote">
-<div class="previousPopNoteInfo">
-<h4>Measure(s)</h4>
-<h5><%= individualNote.measure %></h5>
-<h4>Note</h4>
-<h5><%= individualNote.note %></h5>
-</div>
-</div>
-<% end %>
-</div>
-
-
 <div id="imageContainer" style="position:relative;">
 
 <img id="centralImage" src="<%= @URL %>" alt="Score Page">
@@ -44,6 +29,19 @@
 
 </div>
 
+<div id="previousNotes">
+<% @previousNotes.each do |individualNote| %>
+
+<div id="popNote<%= individualNote.xcoordinate %>-<%= individualNote.ycoordinate =%>" class="previousPopNote">
+<div class="previousPopNoteInfo">
+<h4>Measure(s)</h4>
+<h5><%= individualNote.measure %></h5>
+<h4>Note</h4>
+<h5><%= individualNote.note %></h5>
+</div>
+</div>
+<% end %>
+</div>
 
 <!-- Controller specific patch -->
 

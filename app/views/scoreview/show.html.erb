@@ -3,9 +3,17 @@
 <a class="btn btn-default" href="<%= @forwardPageURL %>">></a>
 </div>
 
+<div id="imageContainer" style="position:relative;">
+
+<img id="centralImage" src="<%= @URL %>" alt="Score Page">
+
+<div id="gridContainer" style="position:absolute;width:100%;height:100%;top:0px;left:0px;z-index:1;">
+</div>
+
+</div>
+
 <div id="previousNotes">
 <% @previousNotes.each do |individualNote| %>
-
 <div id="popNote<%= individualNote.xcoordinate %>-<%= individualNote.ycoordinate =%>" class="previousPopNote">
 <div class="previousPopNoteInfo">
 <h4>Measure(s)</h4>
@@ -17,11 +25,4 @@
 <% end %>
 </div>
 
-<div id="imageContainer" style="position:relative;">
 
-<img id="centralImage" src="<%= @URL %>" alt="Score Page">
-
-<div id="gridContainer" style="position:absolute;width:100%;height:100%;top:0px;left:0px;z-index:1;">
-</div>
-
-</div>
