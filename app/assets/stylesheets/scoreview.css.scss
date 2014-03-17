@@ -2,6 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#imageContainer {
+	position:relative;
+}
+
+#gridContainer {
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	z-index:1;
+}
+
+#scoreviewNav {
+	position:fixed;
+	right:5px;
+	top:50px;
+	font-size:2em;
+}
+
 .pop, .previousPopNote {
 	height: 37px;
 	width: 30px;
