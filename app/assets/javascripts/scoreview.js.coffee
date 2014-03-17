@@ -24,8 +24,6 @@ setUpGrid = () ->
 				xcoor = 0
 		ycoor++
 		console.log "Finished Creating Grid"
-	
-#Append Previous Notes function
 
 appendPreviousNotes = () ->
 	$( '.previousPopNote').each ->
@@ -40,9 +38,12 @@ appendPreviousNotes = () ->
 	console.log "Added points"
 
 
-$(document).ready ->
+scoreviewSetup = () ->
 	setUpGrid()
 	appendPreviousNotes()
+
+$(window).load(scoreviewSetup)
+
 
 ###
 jQuery ($) ->
