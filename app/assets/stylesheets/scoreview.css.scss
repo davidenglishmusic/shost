@@ -33,7 +33,7 @@
 	background-color: #C0E445;
 	border: 0px solid;
 	border-radius: 45px;
-	opacity:0.95;
+	opacity:0.8;
 }
 
 .pop:after, .previousPopNote:after {
@@ -53,6 +53,8 @@
 	height:300px; /*230*/
 	left:-150px;
 	top:-319px; /*249*/
+	opacity:0.95;
+
 }
 
 .pop:hover:after, .previousPopNote:hover:after {
