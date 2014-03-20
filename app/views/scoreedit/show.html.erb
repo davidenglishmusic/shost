@@ -51,12 +51,15 @@
 
   $(window).load(function() {
     return $(".gridPoint").click(function() {
-      var l;
+      var l, template;
       if (!$(this).find('.pop').length) {
         l = $(this).attr('id');
-        return $(this).append('<div class="pop" id="pop' + l + '"><div class="popInfo"><form id="popform' + l + '"><input type="text" name="popInfoMeasures" placeholder="Measure(s)"><textarea rows="7" cols="30" name="popInfoNotes" placeholder="Notes..."></textarea><div class="actions">\
-	    <input class="btn btn-primary" name="commit" type="submit" value="Update Note">\
-	  </div></form></div></div>');
+        template = $('#formTemplate').html();
+        $(this).append('<div class="pop" id="pop' + l + '"><div class="popInfo">' + template + '</div></div>');
+        $('.pop .popInfo #new_songnote input#songnote_songtitle', this).val($('#notesDefaultSongTitle').html());
+        $('.pop .popInfo #new_songnote input#songnote_page', this).val($('#notesDefaultSongPage').html());
+        $('.pop .popInfo #new_songnote input#songnote_xcoordinate', this).val(l.match(/\d+/));
+        return $('.pop .popInfo #new_songnote input#songnote_ycoordinate', this).val(l.match(/[^-]+$/));
       }
     });
   });
