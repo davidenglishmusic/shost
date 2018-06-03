@@ -13,7 +13,7 @@ gem 'unicorn'
 gem 'jquery-turbolinks'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '4.2.10'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
