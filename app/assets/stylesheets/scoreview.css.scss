@@ -3,102 +3,112 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #imageContainer {
-	position:relative;
+	position: relative;
 }
 
-#gridContainer {
-	position:absolute;
-	width:100%;
-	height:100%;
-	top:0px;
-	left:0px;
-	z-index:1;
+#grid-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 #scoreviewNav {
-	position:fixed;
-	right:5px;
-	top:50px;
-	font-size:2em;
-	z-index:1;
+	position: fixed;
+	right: 5px;
+	top: 50px;
+	font-size: 2em;
+	z-index: 1;
 }
 
-.pop, .previousPopNote {
+.pop,
+.previousPopNote {
 	height: 37px;
 	width: 30px;
-	margin-top: 0px;
+	margin-top: 0;
 	top: -50px;
 	left: -12px;
 	position: relative;
 	background-color: #C0E445;
-	border: 0px solid;
+	border: 0 solid;
 	border-radius: 45px;
-	opacity:0.8;
+	opacity: 0.8;
 }
 
-.pop:after, .previousPopNote:after {
+.pop:after,
+.previousPopNote:after {
 	content: "";
 	position: absolute;
 	right: 2px;
 	top: 28px;
-	width: 0px;
-	height: 0px;
-	border-width: 26px 13px 0px;
+	width: 0;
+	height: 0;
+	border-width: 26px 13px 0;
 	border-color: #C0E445 transparent;
 	border-style: solid;
 }
 
-.pop:hover, .previousPopNote:hover {
-	width:300px;
-	height:300px; /*230*/
-	left:-150px;
-	top:-319px; /*249*/
-	opacity:0.95;
-
+.pop:hover,
+.previousPopNote:hover {
+	width: 300px;
+	height: 300px;
+	/*230*/
+	left: -150px;
+	top: -319px;
+	/*249*/
+	opacity: 0.95;
 }
 
-.pop:hover:after, .previousPopNote:hover:after {
+.pop:hover:after,
+.previousPopNote:hover:after {
 	content: "";
 	position: absolute;
 	right: 134px;
-	top: 300px; /*222*/
-	width: 0px;
-	height: 0px;
-	border-width: 26px 13px 0px;
+	top: 300px;
+	/*222*/
+	width: 0;
+	height: 0;
+	border-width: 26px 13px 0;
 	border-color: #C0E445 transparent;
 	border-style: solid;
 }
 
 .popInfo {
-	display:none;
-	width:100%;
-	padding:10px;
-	text-align:center;
+	display: none;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
 	box-sizing: border-box;
-	z-index:10;
-}
-
-/*
-@-moz-document url-prefix() {
-    .popInfo {
-        width: 280px;
-    }
-}
-*/
-.previousPopNoteInfo {
-	padding:20px;
-	text-align:center;
+	z-index: 10;
 }
 
 .previousPopNoteInfo {
-	display:none;
+	padding: 20px;
+	text-align: center;
+}
+
+.previousPopNoteInfo {
+	display: none;
 }
 
 #previousNotesLoadingZone {
-	display:block;
+	display: block;
 }
 
-.pop:hover .popInfo, .pop:hover #new_songnote.new_songnote, .previousPopNote:hover .previousPopNoteInfo {
-	display:block;
+.pop:hover #new_songnote.new_songnote,
+.pop:hover .popInfo,
+.previousPopNote:hover .previousPopNoteInfo {
+	display: block;
 }
 
+#central-image {
+	width: 100%;
+}
+
+.grid-point {
+	display: block;
+}
