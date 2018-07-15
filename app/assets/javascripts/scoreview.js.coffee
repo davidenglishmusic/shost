@@ -25,7 +25,7 @@ setUpGrid = () ->
 	console.log "Finished Creating Grid"
 
 appendPreviousNotes = () ->
-	$( '.previousPopNote').each ->
+	$( '.previous-pop-note').each ->
 		noteXCoor = $(this).attr('id').match(/\d+/)
 		console.log this
 		console.log noteXCoor

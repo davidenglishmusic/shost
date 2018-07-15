@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#imageContainer {
+#image-container {
 	position: relative;
 }
 
@@ -17,7 +17,7 @@
 	flex-wrap: wrap;
 }
 
-#scoreviewNav {
+#scoreview-nav {
 	position: fixed;
 	right: 5px;
 	top: 50px;
@@ -26,7 +26,7 @@
 }
 
 .pop,
-.previousPopNote {
+.previous-pop-note {
 	height: 37px;
 	width: 30px;
 	margin-top: 0;
@@ -40,7 +40,7 @@
 }
 
 .pop:after,
-.previousPopNote:after {
+.previous-pop-note:after {
 	content: "";
 	position: absolute;
 	right: 2px;
@@ -53,23 +53,20 @@
 }
 
 .pop:hover,
-.previousPopNote:hover {
+.previous-pop-note:hover {
 	width: 300px;
 	height: 300px;
-	/*230*/
 	left: -150px;
 	top: -319px;
-	/*249*/
 	opacity: 0.95;
 }
 
 .pop:hover:after,
-.previousPopNote:hover:after {
+.previous-pop-note:hover:after {
 	content: "";
 	position: absolute;
 	right: 134px;
 	top: 300px;
-	/*222*/
 	width: 0;
 	height: 0;
 	border-width: 26px 13px 0;
@@ -77,7 +74,7 @@
 	border-style: solid;
 }
 
-.popInfo {
+.pop-info {
 	display: none;
 	width: 100%;
 	padding: 10px;
@@ -86,22 +83,18 @@
 	z-index: 10;
 }
 
-.previousPopNoteInfo {
+.previous-pop-note-info {
 	padding: 20px;
 	text-align: center;
 }
 
-.previousPopNoteInfo {
+.previous-pop-note-info {
 	display: none;
 }
 
-#previousNotesLoadingZone {
-	display: block;
-}
-
 .pop:hover #new_songnote.new_songnote,
-.pop:hover .popInfo,
-.previousPopNote:hover .previousPopNoteInfo {
+.pop:hover .pop-info,
+.previous-pop-note:hover .previous-pop-note-info {
 	display: block;
 }
 

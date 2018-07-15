@@ -46,7 +46,7 @@
 	border-style: solid;
 }
 
-.popInfo {
+.pop-info {
 	display:none;
 	width:100%;
 	padding:10px;
@@ -55,11 +55,11 @@
 	z-index:10;
 }
 
-.pop:hover .popInfo, .pop:hover form {
+.pop:hover .pop-info, .pop:hover form {
 	display:block;
 }
 
-.songNoteHide {
+.song-note-hide {
 	display:none;
 }
 
@@ -69,10 +69,6 @@
 	display:none;
 }
 
-.pop form #songnote_note {
-	height:60px;
-}
-
-#formTemplate, #scoreEditCurrentPageInformation {
+#form-template, #score-edit-current-page-information {
 	display:none;
 }

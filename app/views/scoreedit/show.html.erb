@@ -1,9 +1,9 @@
-<div id="scoreviewNav">
+<div id="scoreview-nav">
 <a class="btn btn-default"  href="<%= @previousPageURL %>"><</a>
 <a class="btn btn-default" href="<%= @forwardPageURL %>">></a>
 </div>
 
-<div id="scoreEditCurrentPageInformation">
+<div id="score-edit-current-page-information">
 <div id="notesDefaultSongTitle">
 <%= @songTitle %>
 </div>
@@ -14,7 +14,7 @@
 </div>
 
 
-<div id="imageContainer">
+<div id="image-container">
 
 <img id="central-image" src="<%= @URL %>" alt="Score Page">
 
@@ -23,7 +23,7 @@
 
 </div>
 
-<div id="formTemplate">
+<div id="form-template">
 
 <%= render 'form' %>
 
@@ -32,8 +32,8 @@
 <div id="previousNotes">
 <% @previousNotes.each do |individualNote| %>
 
-<div id="popNote<%= individualNote.xcoordinate %>-<%= individualNote.ycoordinate =%>" class="previousPopNote">
-<div class="previousPopNoteInfo">
+<div id="popNote<%= individualNote.xcoordinate %>-<%= individualNote.ycoordinate =%>" class="previous-pop-note">
+<div class="previous-pop-note-info">
 <h4>Measure(s)</h4>
 <h5><%= individualNote.measure %></h5>
 <h4>Note</h4>
@@ -54,12 +54,12 @@
       var l, template;
       if (!$(this).find('.pop').length) {
         l = $(this).attr('id');
-        template = $('#formTemplate').html();
-        $(this).append('<div class="pop" id="pop' + l + '"><div class="popInfo">' + template + '</div></div>');
-        $('.pop .popInfo #new_songnote input#songnote_songtitle', this).val($('#notesDefaultSongTitle').html());
-        $('.pop .popInfo #new_songnote input#songnote_page', this).val($('#notesDefaultSongPage').html());
-        $('.pop .popInfo #new_songnote input#songnote_xcoordinate', this).val(l.match(/\d+/));
-        return $('.pop .popInfo #new_songnote input#songnote_ycoordinate', this).val(l.match(/[^-]+$/));
+        template = $('#form-template').html();
+        $(this).append('<div class="pop" id="pop' + l + '"><div class="pop-info">' + template + '</div></div>');
+        $('.pop .pop-info #new_songnote input#songnote_songtitle', this).val($('#notesDefaultSongTitle').html());
+        $('.pop .pop-info #new_songnote input#songnote_page', this).val($('#notesDefaultSongPage').html());
+        $('.pop .pop-info #new_songnote input#songnote_xcoordinate', this).val(l.match(/\d+/));
+        return $('.pop .pop-info #new_songnote input#songnote_ycoordinate', this).val(l.match(/[^-]+$/));
       }
     });
   });
