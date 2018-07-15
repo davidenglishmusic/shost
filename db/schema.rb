@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,49 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140308055444) do
+ActiveRecord::Schema.define(version: 2014_03_08_055444) do
 
-  create_table "events", force: true do |t|
-    t.text     "event"
-    t.date     "date"
+  create_table "events", force: :cascade do |t|
+    t.text "event"
+    t.date "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "notes", force: true do |t|
-    t.text     "note"
-    t.string   "pages"
-    t.text     "source"
-    t.string   "author"
-    t.string   "url"
-    t.date     "date"
+  create_table "notes", force: :cascade do |t|
+    t.text "note"
+    t.string "pages"
+    t.text "source"
+    t.string "author"
+    t.string "url"
+    t.date "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "pieces", force: true do |t|
-    t.string   "title"
-    t.string   "composer"
-    t.string   "author"
-    t.date     "date"
-    t.string   "opus"
-    t.string   "pages"
-    t.string   "positionincycle"
-    t.text     "imageURLs"
-    t.text     "originalText"
-    t.text     "transliterationText"
-    t.text     "translationText"
+  create_table "pieces", force: :cascade do |t|
+    t.string "title"
+    t.string "composer"
+    t.string "author"
+    t.date "date"
+    t.string "opus"
+    t.string "pages"
+    t.string "positionincycle"
+    t.text "imageURLs"
+    t.text "originalText"
+    t.text "transliterationText"
+    t.text "translationText"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "songnotes", force: true do |t|
-    t.string   "songtitle"
-    t.integer  "page",        limit: 255
-    t.string   "xcoordinate"
-    t.string   "ycoordinate"
-    t.string   "measure"
-    t.text     "note"
+  create_table "songnotes", force: :cascade do |t|
+    t.string "songtitle"
+    t.integer "page"
+    t.string "xcoordinate"
+    t.string "ycoordinate"
+    t.string "measure"
+    t.text "note"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
