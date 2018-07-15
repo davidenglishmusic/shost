@@ -6,7 +6,6 @@ gem 'pg', '~> 0.21'
 
 gem 'rails_12factor', group: :production
 
-gem 'less-rails'
 gem 'therubyracer', platforms: :ruby
 gem 'twitter-bootstrap-rails'
 

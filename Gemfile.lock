@@ -190,7 +190,6 @@ DEPENDENCIES
   jbuilder (~> 2.7.0)
   jquery-rails
   jquery-turbolinks
-  less-rails
   pg (~> 0.21)
   rails (= 5.2.0)
   rails_12factor
