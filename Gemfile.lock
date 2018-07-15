@@ -43,6 +43,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
+    bootsnap (1.3.1)
+      msgpack (~> 1.0)
     builder (3.2.3)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -80,6 +82,10 @@ GEM
       sprockets (> 2, < 4)
       tilt
     libv8 (3.16.14.19)
+    listen (3.1.5)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -92,6 +98,7 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
+    msgpack (1.2.4)
     multi_json (1.13.1)
     nio4r (2.3.1)
     nokogiri (1.8.4)
@@ -136,6 +143,7 @@ GEM
       ffi (>= 0.5.0, < 2)
     rdoc (6.0.4)
     ref (2.0.0)
+    ruby_dep (1.5.0)
     sass (3.5.6)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -186,10 +194,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootsnap
   coffee-rails (~> 4.2.2)
   jbuilder (~> 2.7.0)
   jquery-rails
   jquery-turbolinks
+  listen
   pg (~> 0.21)
   rails (= 5.2.0)
   rails_12factor
