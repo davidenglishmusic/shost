@@ -1,6 +1,5 @@
-class SwitchPageColumnToIntegerForSongnotes < ActiveRecord::Migration
-
-  def self.up  
+class SwitchPageColumnToIntegerForSongnotes < ActiveRecord::Migration[4.2]
+  def self.up
     if connection.adapter_name.downcase == 'postgresql'
       connection.execute(%q{
         alter table songnotes
@@ -16,5 +15,4 @@ class SwitchPageColumnToIntegerForSongnotes < ActiveRecord::Migration
   def self.down
 	 change_column :songnotes, :page, :string
   end
-
 end

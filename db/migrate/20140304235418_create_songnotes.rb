@@ -1,4 +1,4 @@
-class CreateSongnotes < ActiveRecord::Migration
+class CreateSongnotes < ActiveRecord::Migration[4.2]
   def change
     create_table :songnotes do |t|
       t.string :songtitle
