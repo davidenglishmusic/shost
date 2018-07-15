@@ -1,2 +1,2 @@
-class Note < ActiveRecord::Base
+class Note < ApplicationRecord
 end
