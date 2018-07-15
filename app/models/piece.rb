@@ -1,2 +1,2 @@
-class Piece < ActiveRecord::Base
+class Piece < ApplicationRecord
 end

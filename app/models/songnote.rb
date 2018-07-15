@@ -1,2 +1,2 @@
-class Songnote < ActiveRecord::Base
+class Songnote < ApplicationRecord
 end
