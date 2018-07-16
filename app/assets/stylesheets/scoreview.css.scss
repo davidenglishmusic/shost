@@ -103,5 +103,7 @@
 }
 
 .grid-point {
-	display: block;
+	flex: 1 1 1%;
+	position: relative;
+	margin-left: -0.25px;
 }

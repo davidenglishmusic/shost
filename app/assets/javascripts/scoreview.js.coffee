@@ -7,17 +7,11 @@ setUpGrid = () ->
 	gridHeight = 100
 	xcoor = 0
 	ycoor = 0
-	pointWidth = $( "#central-image" ).width() / gridWidth
-	pointHeight = $( "#central-image" ).height() / gridHeight
-	debugger
-	#console.log pointWidth
-	#console.log pointHeight
+	pointHeight = $( "#central-image" ).height() / 100
 	for item in [gridHeight..0]
-		#console.log xcoor + ',' + ycoor
-		$( "#grid-container" ).append( '<div class="grid-point" id="' + xcoor + '-' + ycoor + '" style="width:' + pointWidth + 'px;height:' + pointHeight + 'px;"></div>' )
+		$( "#grid-container" ).append( '<div class="grid-point" id="' + xcoor + '-' + ycoor + '" style="height:' + pointHeight + 'px;"></div>' )
 		for element in [gridWidth..0]
-			#console.log xcoor + ',' + ycoor
-			$( "#grid-container" ).append( '<div class="grid-point" id="' + xcoor + '-' + ycoor + '" style="width:' + pointWidth + 'px;height:' + pointHeight + 'px;"></div>' );
+			$( "#grid-container" ).append( '<div class="grid-point" id="' + xcoor + '-' + ycoor + '" style="height:' + pointHeight + 'px;"></div>' );
 			xcoor++
 			if xcoor > gridWidth
 				xcoor = 0
@@ -42,12 +36,3 @@ scoreviewSetup = () ->
 	appendPreviousNotes()
 
 $(window).load(scoreviewSetup)
-
-
-###
-jQuery ($) ->
-	$( ".gridPoint" ).hover ->
-		k = $(this).attr('id')
-		#$( "#coordinateDisplay" ).val(k)
-		console.log k
-###
