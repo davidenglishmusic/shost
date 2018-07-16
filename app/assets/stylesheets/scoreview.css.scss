@@ -103,7 +103,8 @@
 }
 
 .grid-point {
-	flex: 1 1 1%;
+	flex-basis: 1%;
+	max-width: 1%;
 	position: relative;
 	margin-left: -0.25px;
 }
