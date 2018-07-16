@@ -1,28 +1,18 @@
 class PiecesController < ApplicationController
-  before_action :set_piece, only: [:show, :edit, :update, :destroy]
+  before_action :set_piece, only: %i[show edit update destroy]
 
-  # GET /pieces
-  # GET /pieces.json
   def index
     @pieces = Piece.order(:date, :positionincycle)
   end
 
-  # GET /pieces/1
-  # GET /pieces/1.json
-  def show
-  end
+  def show; end
 
-  # GET /pieces/new
   def new
     @piece = Piece.new
   end
 
-  # GET /pieces/1/edit
-  def edit
-  end
+  def edit; end
 
-  # POST /pieces
-  # POST /pieces.json
   def create
     @piece = Piece.new(piece_params)
 
@@ -37,8 +27,6 @@ class PiecesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /pieces/1
-  # PATCH/PUT /pieces/1.json
   def update
     respond_to do |format|
       if @piece.update(piece_params)
@@ -51,8 +39,6 @@ class PiecesController < ApplicationController
     end
   end
 
-  # DELETE /pieces/1
-  # DELETE /pieces/1.json
   def destroy
     @piece.destroy
     respond_to do |format|
@@ -62,13 +48,13 @@ class PiecesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_piece
-      @piece = Piece.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def piece_params
-      params.require(:piece).permit(:title, :composer, :author, :date, :opus, :pages, :positionincycle, :imageURLs, :originalText, :transliterationText, :translationText)
-    end
+  def set_piece
+    @piece = Piece.find(params[:id])
+  end
+
+  def piece_params
+    params.require(:piece)
+          .permit(:title, :composer, :author, :date, :opus, :pages, :positionincycle, :imageURLs, :originalText, :transliterationText, :translationText)
+  end
 end

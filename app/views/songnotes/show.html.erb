@@ -2,35 +2,35 @@
 
 <p>
   <strong>Songtitle:</strong>
-  <%= @songnote.songtitle %>
+  <%= @song_note.songtitle %>
 </p>
 
 <p>
   <strong>Page:</strong>
-  <%= @songnote.page %>
+  <%= @song_note.page %>
 </p>
 
 <p>
   <strong>Xcoordinate:</strong>
-  <%= @songnote.xcoordinate %>
+  <%= @song_note.xcoordinate %>
 </p>
 
 <p>
   <strong>Ycoordinate:</strong>
-  <%= @songnote.ycoordinate %>
+  <%= @song_note.ycoordinate %>
 </p>
 
 <p>
   <strong>Measure:</strong>
-  <%= @songnote.measure %>
+  <%= @song_note.measure %>
 </p>
 
 <p>
   <strong>Note:</strong>
-  <%= @songnote.note %>
+  <%= @song_note.note %>
 </p>
 
-<%= link_to 'Edit', edit_songnote_path(@songnote), class: "btn btn-default", role: "button" %> |
+<%= link_to 'Edit', edit_songnote_path(@song_note), class: "btn btn-default", role: "button" %> |
 <%= link_to 'Back to the Index', songnotes_path, class: "btn btn-default", role: "button" %> |
-<%= link_to 'Back to the score', "/pieces/#{Piece.find_by_title(@songnote.songtitle).id}/#{@songnote.page}", class: "btn btn-default", role: "button" %>
+<%= link_to 'Back to the score', "/pieces/#{Piece.find_by_title(@song_note.songtitle).id}/#{@song_note.page}", class: "btn btn-default", role: "button" %>
 

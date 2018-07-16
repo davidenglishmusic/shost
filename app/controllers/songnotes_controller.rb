@@ -4,7 +4,7 @@ class SongnotesController < ApplicationController
   # GET /songnotes
   # GET /songnotes.json
   def index
-    @songnotes = Songnote.order(:songtitle, :measure)
+    @song_notes = Songnote.order(:songtitle, :measure)
   end
 
   # GET /songnotes/1
@@ -14,7 +14,7 @@ class SongnotesController < ApplicationController
 
   # GET /songnotes/new
   def new
-    @songnote = Songnote.new
+    @song_note = Songnote.new
   end
 
   # GET /songnotes/1/edit
@@ -24,15 +24,15 @@ class SongnotesController < ApplicationController
   # POST /songnotes
   # POST /songnotes.json
   def create
-    @songnote = Songnote.new(songnote_params)
+    @song_note = Songnote.new(songnote_params)
 
     respond_to do |format|
-      if @songnote.save
-        format.html { redirect_to @songnote, notice: 'Songnote was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @songnote }
+      if @song_note.save
+        format.html { redirect_to @song_note, notice: 'Songnote was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @song_note }
       else
         format.html { render action: 'new' }
-        format.json { render json: @songnote.errors, status: :unprocessable_entity }
+        format.json { render json: @song_note.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,12 +41,12 @@ class SongnotesController < ApplicationController
   # PATCH/PUT /songnotes/1.json
   def update
     respond_to do |format|
-      if @songnote.update(songnote_params)
-        format.html { redirect_to @songnote, notice: 'Songnote was successfully updated.' }
+      if @song_note.update(songnote_params)
+        format.html { redirect_to @song_note, notice: 'Songnote was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @songnote.errors, status: :unprocessable_entity }
+        format.json { render json: @song_note.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,7 +54,7 @@ class SongnotesController < ApplicationController
   # DELETE /songnotes/1
   # DELETE /songnotes/1.json
   def destroy
-    @songnote.destroy
+    @song_note.destroy
     respond_to do |format|
       format.html { redirect_to songnotes_url }
       format.json { head :no_content }
@@ -64,7 +64,7 @@ class SongnotesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_songnote
-      @songnote = Songnote.find(params[:id])
+      @song_note = Songnote.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

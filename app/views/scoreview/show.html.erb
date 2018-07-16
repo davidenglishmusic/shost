@@ -1,11 +1,11 @@
 <div id="scoreview-nav">
-<a class="btn btn-default"  href="<%= @previousPageURL %>"><</a>
-<a class="btn btn-default" href="<%= @forwardPageURL %>">></a>
+<a class="btn btn-default"  href="<%= @previous_page_url %>"><</a>
+<a class="btn btn-default" href="<%= @forward_page_url %>">></a>
 </div>
 
 <div id="image-container">
 
-<img id="central-image" src="<%= @URL %>" alt="Score Page">
+<img id="central-image" src="<%= @url %>" alt="Score Page">
 
 <div id="grid-container">
 </div>
@@ -13,7 +13,7 @@
 </div>
 
 <div id="previousNotes">
-<% @previousNotes.each do |individualNote| %>
+<% @previous_notes.each do |individualNote| %>
 <div id="popNote<%= individualNote.xcoordinate %>-<%= individualNote.ycoordinate =%>" class="previous-pop-note">
 <div class="previous-pop-note-info">
 <h4>Measure(s)</h4>

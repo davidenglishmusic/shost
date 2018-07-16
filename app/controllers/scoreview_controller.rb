@@ -1,32 +1,28 @@
 class ScoreviewController < ApplicationController
-
   def show
-	urlArray = Piece.find(params[:id]).imageURLs.split("\r\n")
-	@URL = urlArray[(params[:pages]).to_i]
+    url_array = Piece.find(params[:id]).imageURLs.split("\r\n")
+    @url = url_array[params[:pages].to_i]
 
-	songComponent = params[:id].to_i
-	songPageComponent = (params[:pages].to_i)
+    song_component = params[:id].to_i
+    song_page_component = params[:pages].to_i
 
-	if ( (params[:pages].to_i) >= (urlArray.length - 1) )
-		@forwardPageURL = "/songs/#{songComponent}/#{songPageComponent}"
-	
-	else
-		nextPageNumber = songPageComponent + 1
-		@forwardPageURL = "/songs/#{songComponent}/#{nextPageNumber}"
+    if params[:pages].to_i >= (url_array.length - 1)
+      @forward_page_url = "/songs/#{song_component}/#{song_page_component}"
+    else
+      next_page_number = song_page_component + 1
+      @forward_page_url = "/songs/#{song_component}/#{next_page_number}"
+    end
 
-	end
+    if params[:pages].to_i <= 0
+      @previous_page_url = "/songs/#{song_component}/#{song_page_component}"
+    else
+      previous_page_number = song_page_component - 1
+      @previous_page_url = "/songs/#{song_component}/#{previous_page_number}"
+    end
 
-	if ( (params[:pages].to_i) <= 0 )
-		@previousPageURL = "/songs/#{songComponent}/#{songPageComponent}"
-	else
-		previousPageNumber = songPageComponent - 1
-		@previousPageURL = "/songs/#{songComponent}/#{previousPageNumber}"
-	end
-	
-	@songTitle = Piece.find(params[:id]).title
-	@pageNumber = (params[:pages]).to_i
-	
-	@previousNotes = Songnote.where(:songtitle => @songTitle, :page => @pageNumber)
+    @song_title = Piece.find(params[:id]).title
+    @page_number = params[:pages].to_i
+
+    @previous_notes = Songnote.where(songtitle: @song_title, page: @page_number)
   end
-
 end

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SongnotesControllerTest < ActionController::TestCase
   setup do
-    @songnote = songnotes(:one)
+    @song_note = songnotes(:one)
   end
 
   test "should get index" do
@@ -18,30 +18,30 @@ class SongnotesControllerTest < ActionController::TestCase
 
   test "should create songnote" do
     assert_difference('Songnote.count') do
-      post :create, songnote: { measure: @songnote.measure, note: @songnote.note, page: @songnote.page, songtitle: @songnote.songtitle, xcoordinate: @songnote.xcoordinate, ycoordinate: @songnote.ycoordinate }
+      post :create, songnote: { measure: @song_note.measure, note: @song_note.note, page: @song_note.page, songtitle: @song_note.songtitle, xcoordinate: @song_note.xcoordinate, ycoordinate: @song_note.ycoordinate }
     end
 
     assert_redirected_to songnote_path(assigns(:songnote))
   end
 
   test "should show songnote" do
-    get :show, id: @songnote
+    get :show, id: @song_note
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @songnote
+    get :edit, id: @song_note
     assert_response :success
   end
 
   test "should update songnote" do
-    patch :update, id: @songnote, songnote: { measure: @songnote.measure, note: @songnote.note, page: @songnote.page, songtitle: @songnote.songtitle, xcoordinate: @songnote.xcoordinate, ycoordinate: @songnote.ycoordinate }
+    patch :update, id: @song_note, songnote: { measure: @song_note.measure, note: @song_note.note, page: @song_note.page, songtitle: @song_note.songtitle, xcoordinate: @song_note.xcoordinate, ycoordinate: @song_note.ycoordinate }
     assert_redirected_to songnote_path(assigns(:songnote))
   end
 
   test "should destroy songnote" do
     assert_difference('Songnote.count', -1) do
-      delete :destroy, id: @songnote
+      delete :destroy, id: @song_note
     end
 
     assert_redirected_to songnotes_path
