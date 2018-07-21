@@ -46,11 +46,9 @@
 <!-- Controller specific patch -->
 
 <script>
-
 (function() {
-
   $(window).load(function() {
-    return $(".gridPoint").click(function() {
+    return $(".grid-point").click(function() {
       var l, template;
       if (!$(this).find('.pop').length) {
         l = $(this).attr('id');
@@ -63,13 +61,5 @@
       }
     });
   });
-
-  /*
-  	$( ".gridPoint" ).hover ->
-  		m = $(this).attr('id')
-  		console.log "This is the info for pop " + m
-  */
-
-
-}).call(this);</script>
-
+}).call(this);
+</script>
