@@ -1,65 +1,51 @@
 <div id="scoreview-nav">
-<a class="btn btn-default"  href="<%= @previous_page_url %>"><</a>
-<a class="btn btn-default" href="<%= @forward_page_url %>">></a>
+  <a class="btn btn-default"  href="<%= @previous_page_url %>"><</a>
+  <a class="btn btn-default" href="<%= @forward_page_url %>">></a>
 </div>
 
 <div id="score-edit-current-page-information">
-<div id="notesDefaultSongTitle">
-<%= @song_title %>
+  <div id="notes-default-song-title"><%= @song_title %></div>
+  <div id="notes-default-song-page"><%= @page_number %></div>
 </div>
-<div id="notesDefaultSongPage">
-<%= @page_number %>
-</div>
-
-</div>
-
 
 <div id="image-container">
-
-<img id="central-image" src="<%= @url %>" alt="Score Page">
-
-<div id="grid-container">
-</div>
-
+  <img id="central-image" src="<%= @url %>" alt="Score Page">
+  <div id="grid-container"></div>
 </div>
 
 <div id="form-template">
-
-<%= render 'form' %>
-
+  <%= render 'form' %>
 </div>
 
-<div id="previousNotes">
-<% @previous_notes.each do |individualNote| %>
-
-<div id="popNote<%= individualNote.xcoordinate %>-<%= individualNote.ycoordinate =%>" class="previous-pop-note">
-<div class="previous-pop-note-info">
-<h4>Measure(s)</h4>
-<h5><%= individualNote.measure %></h5>
-<h4>Note</h4>
-<h5><%= individualNote.note %></h5>
-</div>
-</div>
-<% end %>
+<div id="previous-notes">
+  <% @previous_notes.each do |previous_note| %>
+    <div id="pop-note-<%= previous_note.xcoordinate %>-<%= previous_note.ycoordinate =%>" class="previous-pop-note">
+      <div class="previous-pop-note-info">
+        <h4>Measure(s)</h4>
+        <h5><%= previous_note.measure %></h5>
+        <h4>Note</h4>
+        <h5><%= previous_note.note %></h5>
+      </div>
+    </div>
+  <% end %>
 </div>
 
 <!-- Controller specific patch -->
-
 <script>
-(function() {
-  $(window).load(function() {
-    return $(".grid-point").click(function() {
-      var l, template;
-      if (!$(this).find('.pop').length) {
-        l = $(this).attr('id');
-        template = $('#form-template').html();
-        $(this).append('<div class="pop" id="pop' + l + '"><div class="pop-info">' + template + '</div></div>');
-        $('.pop .pop-info #new_songnote input#songnote_songtitle', this).val($('#notesDefaultSongTitle').html());
-        $('.pop .pop-info #new_songnote input#songnote_page', this).val($('#notesDefaultSongPage').html());
-        $('.pop .pop-info #new_songnote input#songnote_xcoordinate', this).val(l.match(/\d+/));
-        return $('.pop .pop-info #new_songnote input#songnote_ycoordinate', this).val(l.match(/[^-]+$/));
-      }
+  (function() {
+    $(window).load(function() {
+      return $(".grid-point").click(function() {
+        var l, template;
+        if (!$(this).find('.pop').length) {
+          l = $(this).attr('id');
+          template = $('#form-template').html();
+          $(this).append('<div class="pop" id="pop' + l + '"><div class="pop-info">' + template + '</div></div>');
+          $('.pop .pop-info #new_songnote input#songnote_songtitle', this).val($('#notes-default-song-title').html());
+          $('.pop .pop-info #new_songnote input#songnote_page', this).val($('#notes-default-song-page').html());
+          $('.pop .pop-info #new_songnote input#songnote_xcoordinate', this).val(l.match(/\d+/));
+          return $('.pop .pop-info #new_songnote input#songnote_ycoordinate', this).val(l.match(/[^-]+$/));
+        }
+      });
     });
-  });
-}).call(this);
+  }).call(this);
 </script>
