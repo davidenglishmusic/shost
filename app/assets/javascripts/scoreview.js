@@ -7,9 +7,9 @@ const setUpGrid = function() {
 	let xcoor = 0;
 	let ycoor = 0;
 	const pointHeight = $( "#central-image" ).height() / 100;
-	for (let item = gridHeight, asc = gridHeight <= 0; asc ? item <= 0 : item >= 0; asc ? item++ : item--) {
+	for (let i = 0; i < gridHeight; i++) {
 		$( "#grid-container" ).append( `<div class="grid-point" id="${xcoor}-${ycoor}" style="height:${pointHeight}px;"></div>` );
-		for (let element = gridWidth, asc1 = gridWidth <= 0; asc1 ? element <= 0 : element >= 0; asc1 ? element++ : element--) {
+		for (let j = 0; j < gridWidth; j++) {
 			$( "#grid-container" ).append( `<div class="grid-point" id="${xcoor}-${ycoor}" style="height:${pointHeight}px;"></div>` );
 			xcoor++;
 			if (xcoor > gridWidth) {
