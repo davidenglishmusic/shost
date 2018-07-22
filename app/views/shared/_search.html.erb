@@ -1,0 +1,7 @@
+<%= tag.div data: { controller: 'search' } do %>
+  <%= content_tag(:input,
+                  '',
+                  type: 'text',
+                  placeholder: 'Search...',
+                  data: { action: 'keyup->search#search', target: 'search.query' }) %>
+<% end %>
