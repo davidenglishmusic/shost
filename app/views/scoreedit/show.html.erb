@@ -29,23 +29,3 @@
     </div>
   <% end %>
 </div>
-
-<!-- Controller specific patch -->
-<script>
-  (function() {
-    $(window).load(function() {
-      return $(".grid-point").click(function() {
-        var l, template;
-        if (!$(this).find('.pop').length) {
-          l = $(this).attr('id');
-          template = $('#form-template').html();
-          $(this).append('<div class="pop" id="pop' + l + '"><div class="pop-info">' + template + '</div></div>');
-          $('.pop .pop-info #new_songnote input#songnote_songtitle', this).val($('#notes-default-song-title').html());
-          $('.pop .pop-info #new_songnote input#songnote_page', this).val($('#notes-default-song-page').html());
-          $('.pop .pop-info #new_songnote input#songnote_xcoordinate', this).val(l.match(/\d+/));
-          return $('.pop .pop-info #new_songnote input#songnote_ycoordinate', this).val(l.match(/[^-]+$/));
-        }
-      });
-    });
-  }).call(this);
-</script>

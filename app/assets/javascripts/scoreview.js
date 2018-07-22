@@ -38,7 +38,8 @@ const appendPreviousNotes = function() {
 
 const scoreviewSetup = function() {
   setUpGrid();
-  return appendPreviousNotes();
+  appendPreviousNotes();
+  document.dispatchEvent(new Event('grid-setup-complete'));
 };
 
 $(window).load(scoreviewSetup);
