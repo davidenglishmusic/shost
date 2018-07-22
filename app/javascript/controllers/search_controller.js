@@ -6,7 +6,7 @@ export default class extends Controller {
   search() {
     const element = this.queryTarget
     const searchQuery = element.value
-    $("#infoTable tbody tr").each((index, element) => {
+    $("#info-table tbody tr").each((index, element) => {
       if ($(element).text().toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
         return $(element).show();
       } else {
