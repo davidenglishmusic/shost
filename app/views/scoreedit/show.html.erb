@@ -5,10 +5,7 @@
   <div id="notes-default-song-page"><%= @page_number %></div>
 </div>
 
-<div id="image-container">
-  <img id="central-image" src="<%= @url %>" alt="Score Page">
-  <div id="grid-container"></div>
-</div>
+<%= render 'scoreview/score_page' %>
 
 <div id="form-template">
   <%= render 'form' %>
