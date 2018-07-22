@@ -16,5 +16,6 @@ class ScoreeditController < ApplicationController
     @song_title = piece.title
     @song_note = Songnote.new
     @previous_notes = Songnote.where(songtitle: @song_title, page: @score_page)
+    @score_editing = true
   end
 end

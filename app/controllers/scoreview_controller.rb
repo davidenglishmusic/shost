@@ -15,5 +15,7 @@ class ScoreviewController < ApplicationController
 
     @song_title = piece.title
     @previous_notes = Songnote.where(songtitle: @song_title, page: @score_page)
+                              .select(:xcoordinate, :ycoordinate, :measure, :note)
+                              .as_json
   end
 end

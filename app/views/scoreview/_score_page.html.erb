@@ -1,4 +1,12 @@
-<div id="image-container">
-  <%= image_tag(@url, id: 'central-image', alt: 'score page') %>
-  <div id="grid-container"></div>
-</div>
+<%= tag.div data: { controller: 'score-grid', editing: @score_editing } do %>
+  <div id="image-container">
+    <%= image_tag(@url, id: 'central-image', alt: 'score page', data: { target: 'score-grid.scoreImg'}) %>
+    <%= tag.div id: 'grid-container', data: { target: 'score-grid.gridContainer' } %>
+  </div>
+
+  <%= tag.div id: 'previous-notes',
+             data: {
+               target: 'score-grid.previousNotes',
+               previous_notes: @previous_notes
+             } %>
+<% end %>
