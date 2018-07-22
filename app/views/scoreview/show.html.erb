@@ -8,15 +8,4 @@
   <div id="grid-container"></div>
 </div>
 
-<div id="previous-notes">
-  <% @previous_notes.each do |previous_note| %>
-    <div id="pop-note-<%= previous_note.xcoordinate %>-<%= previous_note.ycoordinate =%>" class="previous-pop-note">
-      <div class="previous-pop-note-info">
-        <h4>Measure(s)</h4>
-        <h5><%= previous_note.measure %></h5>
-        <h4>Note</h4>
-        <h5><%= previous_note.note %></h5>
-      </div>
-    </div>
-  <% end %>
-</div>
+<%= render 'scoreview/previous_notes' %>
