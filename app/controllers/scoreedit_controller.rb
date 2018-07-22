@@ -7,17 +7,17 @@ class ScoreeditController < ApplicationController
     song_page_component = params[:pages].to_i
 
     if params[:pages].to_i >= (url_array.length - 1)
-      @forward_page_url = "/pieces/#{song_component}/#{song_page_component}"
+      @forward_page_url = "/pieces/#{song_component}/score_page/#{song_page_component}"
     else
       next_page_number = song_page_component + 1
-      @forward_page_url = "/pieces/#{song_component}/#{next_page_number}"
+      @forward_page_url = "/pieces/#{song_component}/score_page/#{next_page_number}"
     end
 
     if params[:pages].to_i <= 0
-      @previous_page_url = "/pieces/#{song_component}/#{song_page_component}"
+      @previous_page_url = "/pieces/#{song_component}/score_page/#{song_page_component}"
     else
       previous_page_number = song_page_component - 1
-      @previous_page_url = "/pieces/#{song_component}/#{previous_page_number}"
+      @previous_page_url = "/pieces/#{song_component}/score_page/#{previous_page_number}"
     end
 
     @song_title = Piece.find(params[:id]).title

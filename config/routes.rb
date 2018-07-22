@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   get '/quotes/', to: 'quote#index'
   get '/songs/', to: 'songs#index'
 
-  get '/songs/:id/:pages', to: 'scoreview#show'
-  get '/pieces/:id/:pages', to: 'scoreedit#show'
+  get '/songs/:id/score_page/:pages', to: 'scoreview#show'
+  get '/pieces/:id/score_page/:pages', to: 'scoreedit#show'
 end
