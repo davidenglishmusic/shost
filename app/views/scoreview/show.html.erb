@@ -1,28 +1,22 @@
 <div id="scoreview-nav">
-<a class="btn btn-default"  href="<%= @previous_page_url %>"><</a>
-<a class="btn btn-default" href="<%= @forward_page_url %>">></a>
+  <a class="btn btn-default"  href="<%= @previous_page_url %>"><</a>
+  <a class="btn btn-default" href="<%= @forward_page_url %>">></a>
 </div>
 
 <div id="image-container">
-
-<img id="central-image" src="<%= @url %>" alt="Score Page">
-
-<div id="grid-container">
+  <img id="central-image" src="<%= @url %>" alt="Score Page">
+  <div id="grid-container"></div>
 </div>
 
+<div id="previous-notes">
+  <% @previous_notes.each do |previous_note| %>
+    <div id="pop-note-<%= previous_note.xcoordinate %>-<%= previous_note.ycoordinate =%>" class="previous-pop-note">
+      <div class="previous-pop-note-info">
+        <h4>Measure(s)</h4>
+        <h5><%= previous_note.measure %></h5>
+        <h4>Note</h4>
+        <h5><%= previous_note.note %></h5>
+      </div>
+    </div>
+  <% end %>
 </div>
-
-<div id="previousNotes">
-<% @previous_notes.each do |individualNote| %>
-<div id="popNote<%= individualNote.xcoordinate %>-<%= individualNote.ycoordinate =%>" class="previous-pop-note">
-<div class="previous-pop-note-info">
-<h4>Measure(s)</h4>
-<h5><%= individualNote.measure %></h5>
-<h4>Note</h4>
-<h5><%= individualNote.note %></h5>
-</div>
-</div>
-<% end %>
-</div>
-
-
