@@ -1,5 +1,6 @@
 class PiecesController < ApplicationController
   before_action :set_piece, only: %i[show edit update destroy]
+  before_action :authenticate_user!
 
   def index
     @pieces = Piece.order(:date, :positionincycle)

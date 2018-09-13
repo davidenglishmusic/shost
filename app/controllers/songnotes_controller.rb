@@ -1,5 +1,6 @@
 class SongnotesController < ApplicationController
   before_action :set_songnote, only: %i[show edit update destroy]
+  before_action :authenticate_user!
 
   def index
     @song_notes = Songnote.order(:songtitle, :measure)
