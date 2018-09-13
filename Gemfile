@@ -6,7 +6,7 @@ gem 'pg', '~> 0.21'
 
 gem 'rails_12factor', group: :production
 
-gem 'therubyracer', platforms: :ruby
+gem 'mini_racer'
 gem 'twitter-bootstrap-rails'
 
 gem 'unicorn'
