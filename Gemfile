@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.5.1'
+ruby '2.5.3'
 
 gem 'pg', '~> 0.21'
 
@@ -16,7 +16,7 @@ gem 'jquery-turbolinks'
 gem 'bootsnap', require: false
 gem 'listen'
 
-gem 'rails', '5.2.2'
+gem 'rails', '5.2.3'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
@@ -35,7 +35,7 @@ gem 'turbolinks'
 
 gem 'webpacker', '~> 3.5'
 
-gem 'devise'
+gem 'devise', '>= 4.6.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
