@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.5.3'
 
-gem 'pg', '~> 0.21'
+gem 'pg', '~> 1.1.4'
 
 gem 'rails_12factor', group: :production
 
@@ -33,7 +33,7 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
-gem 'webpacker', '~> 3.5'
+gem 'webpacker', '~> 4.0.6'
 
 gem 'devise', '>= 4.6.0'
 
@@ -43,7 +43,7 @@ group :doc do
 end
 
 group :development do
-  gem 'pry', '0.11.3'
+  gem 'pry', '0.12.2'
 end
 
 # Use ActiveModel has_secure_password
