@@ -33,7 +33,7 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
-gem 'webpacker', '~> 3.5'
+gem 'webpacker', '~> 4.x'
 
 gem 'devise', '>= 4.6.0'
 
