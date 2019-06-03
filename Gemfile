@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.3'
 
-gem 'pg', '~> 0.21'
+gem 'pg', '~> 1.1.4'
 
 gem 'rails_12factor', group: :production
 
@@ -43,7 +43,7 @@ group :doc do
 end
 
 group :development do
-  gem 'pry', '0.11.3'
+  gem 'pry', '0.12.2'
 end
 
 # Use ActiveModel has_secure_password
