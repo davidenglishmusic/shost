@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "@rails/webpacker": "https://github.com/rails/webpacker.git",
+    "@rails/webpacker": "4.2.2",
     "stimulus": "1.1.1"
   },
   "devDependencies": {
-    "webpack-dev-server": "3.7.1"
+    "webpack-dev-server": "3.10.1"
   }
 }
