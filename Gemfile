@@ -7,7 +7,7 @@ gem 'pg', '~> 1.2.0'
 gem 'rails_12factor', group: :production
 
 gem 'mini_racer'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', git: 'https://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 gem 'unicorn'
 
@@ -16,7 +16,7 @@ gem 'jquery-turbolinks'
 gem 'bootsnap', require: false
 gem 'listen'
 
-gem 'rails', '5.2.3'
+gem 'rails', '6.0.2.1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
