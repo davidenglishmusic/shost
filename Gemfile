@@ -16,7 +16,7 @@ gem 'jquery-turbolinks'
 gem 'bootsnap', require: false
 gem 'listen'
 
-gem 'rails', '6.0.2.1'
+gem 'rails', '6.0.3.2'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
