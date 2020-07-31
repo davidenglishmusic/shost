@@ -43,7 +43,7 @@ group :doc do
 end
 
 group :development do
-  gem 'pry', '0.12.2'
+  gem 'pry', '0.13.1'
 end
 
 # Use ActiveModel has_secure_password
